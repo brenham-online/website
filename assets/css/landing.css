@@ -1,0 +1,65 @@
+body {
+  color: white;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(../images/courthouse.jpg);
+  --image-aspect-ratio: calc(1380 / 920);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+@supports (background-image: url(../images/courthouse.webp)) {
+  body {
+    background-image: url(../images/courthouse.webp);
+  }
+}
+@supports (background-image: url(../images/courthouse.avif)) {
+  body {
+    background-image: url(../images/courthouse.avif);
+  }
+}
+
+@media (min-aspect-ratio: 1380 / 920) {
+  body {
+    --full-height: calc(100vw / var(--image-aspect-ratio));
+    background-size: 100vw var(--full-height);
+    background-position: 0 calc((100vh - var(--full-height)) / 2);
+  }
+}
+
+@media (max-aspect-ratio: 1380 / 920) {
+  body {
+    --full-width: calc(100vh * var(--image-aspect-ratio));
+    background-size: var(--full-width) 100vh;
+    background-position: calc((100vw - var(--full-width)) / 2) 0;
+  }
+}
+
+a {
+  color: white;
+  font-weight: bold;
+}
+
+main {
+  justify-self: start;
+  max-width: 400px;
+  background-color: rgba(0, 0, 0, 80%);
+  padding: 10px 30px;
+}
+
+footer {
+  align-self: end;
+  max-width: 300px;
+  text-align: right;
+  background-color: rgba(0, 0, 0, 60%);
+  font-size: 12px;
+  padding: 5px;
+}
+
+.spacer {
+  flex-grow: 1;
+}
