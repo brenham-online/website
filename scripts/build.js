@@ -33,7 +33,12 @@ for (const image of images) {
 }
 console.log("Running PostCSS...");
 const postcssInstance = postcss([postcssPreset(), cssnanoPlugin()]);
-const stylesheets = ["common.css", "landing.css", "normalize.css"];
+const stylesheets = [
+  "common.css",
+  "content.css",
+  "landing.css",
+  "normalize.css",
+];
 for (const stylesheet of stylesheets) {
   console.log(` - ${stylesheet}`);
   const from = `assets/css/${stylesheet}`;
@@ -46,7 +51,7 @@ for (const stylesheet of stylesheets) {
   await fs.writeFile(`dist/assets/css/${stylesheet}`, processed.css);
 }
 console.log("Minifying HTML...");
-const pages = ["index.html"];
+const pages = ["clubs.html", "data.html", "index.html", "nonprofits.html"];
 for (const page of pages) {
   console.log(` - ${page}`);
   const from = page;

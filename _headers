@@ -1,2 +1,2 @@
 *.html
-    Link: <assets/css/normalize.css>; rel=preload; as=style, <assets/css/common.css>; rel=preload; as=style, <assets/fonts/montserrat-v25-latin-regular.woff2>; rel=preload; as=font; crossorigin=anonymous, <assets/fonts/montserrat-v25-latin-700.woff2>; rel=preload; as=font; crossorigin=anonymous
+    Link: <assets/css/normalize.css>; rel=preload; as=style, <assets/css/common.css>; rel=preload; as=style, <assets/fonts/montserrat-v25-latin-regular.woff2>; rel=preload; as=font; crossorigin=anonymous, <assets/fonts/montserrat-v25-latin-700.woff2>; rel=preload; as=font; crossorigin=anonymous, <assets/css/landing.css>; rel=prefetch, <assets/css/content.css>; rel=prefetch
